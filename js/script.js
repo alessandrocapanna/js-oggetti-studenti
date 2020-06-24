@@ -3,13 +3,13 @@ var studente = {
   nome: 'alessandro',
   cognome: 'capanna',
   età: 20
-}
+};
 
 // Stampo a schermo attraverso il for in tutte le proprietà.
 for (var singolaProprietà in studente) {
   var proprietàDaStampare = studente[singolaProprietà];
-  $('ul#studenti').append('<li>' + proprietàDaStampare+ '</li>');
-}
+  $('ul#proprieta-studente').append('<li>' + proprietàDaStampare+ '</li>');
+};
 
 // - Creare un array di oggetti di studenti.
 var arrayStudenti = [
@@ -33,7 +33,7 @@ var arrayStudenti = [
     nome:'aldo',
     cognome:'moro'
   }
-]
+];
 //  Ciclare su tutti gli studenti e stampare per ognuno nome e cognome
 for (var i = 0; i < arrayStudenti.length; i++) {
   var singoloNome = arrayStudenti[i].nome;
@@ -48,7 +48,12 @@ $('button').click (
   function(){
     var nome = prompt('inserisci il nome dello studente');
     var cognome = prompt('inserisci il cognome dello studente');
-    var età = prompt('inserisci l\'eta dello studente');
-    arrayStudenti.push('{'+ nome+'}')
+    var eta = prompt('inserisci l\'eta dello studente');
+    var nuovoStudente = {
+      nome: nome,
+      cognome: cognome,
+      eta: eta
+    };
+    $('ul#nuovi-studenti').append('<li>' + 'studente nuovo' + '</br>' + 'nome: ' + nome  + '</br>' + 'cognome: ' + cognome + '</br>' + 'età: ' + eta +'</li>')
   }
 );

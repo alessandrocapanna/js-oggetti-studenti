@@ -1,0 +1,15 @@
+ul#nuovi-studenti {
+  position: absolute;
+  top: 0;
+  left: 400px;
+  margin-top: 0;
+}
+ul#studenti {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  margin-top: 0;
+}
+div {
+  position: relative;
+}
