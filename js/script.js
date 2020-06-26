@@ -15,23 +15,28 @@ for (var singolaProprietà in studente) {
 var arrayStudenti = [
   {
     nome:'pippo',
-    cognome:'rossi'
+    cognome:'rossi',
+    età: 34
   },
   {
     nome:'giacomo',
-    cognome:'hackman'
+    cognome:'hackman',
+    età: 33
   },
   {
     nome:'steve',
-    cognome:'maldo'
+    cognome:'maldo',
+    età: 22
   },
   {
     nome:'justin',
-    cognome:'gabbana'
+    cognome:'gabbana',
+    età: 24
   },
   {
     nome:'aldo',
-    cognome:'moro'
+    cognome:'moro',
+    età: 14
   }
 ];
 //  Ciclare su tutti gli studenti e stampare per ognuno nome e cognome
@@ -54,6 +59,8 @@ $('button').click (
       cognome: cognome,
       eta: eta
     };
+    arrayStudenti.push(nuovoStudente);
+    console.log(arrayStudenti);
     $('ul#nuovi-studenti').append('<li>' + 'studente nuovo' + '</br>' + 'nome: ' + nome  + '</br>' + 'cognome: ' + cognome + '</br>' + 'età: ' + eta +'</li>')
   }
 );
